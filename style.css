@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
 #bubbles {
     position: fixed;
     display: flex;
@@ -8,14 +13,29 @@
 }
 
 .bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
     border: solid;
     border-radius: 50%;
     padding: 0.25em;
     margin: 5px;
+    transition: 0.2s;
+    color: black;
+    background-color: white;
+
+}
+
+.bubble:hover {
+    color: white;
+    background-color: black;
+    text-decoration: none;
 }
 
 header {
-    margin-left: 8em;   
+    margin-left: 8em;
 }
 
 #intro-text {
@@ -25,6 +45,60 @@ header {
     justify-content: center;
 }
 
+#scroll-down-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    transition: 0.2s;
+    color: black;
+    text-decoration: none;
+    transition: ease-out;
+    transition-duration: 0.2s;
+}
+
+#scroll-down-button:hover {
+    color: white;
+    background-color: black;
+}
+
 main {
     margin-left: 8em;
 }
+
+#showcase {
+    height: 100vh;
+}
+
+#projects {
+    height: 60vh;
+}
+
+#technologies {
+    height: 40vh;
+}
+
+#technologies-box {
+    display: grid;
+    max-height: 100%;
+    padding-top: 50px;
+    grid: auto-flow / 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-evenly;
+    /* font-size: 3em; */
+}
+
+.tech-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tech-icon i {
+    font-size: 3em;
+}
+
