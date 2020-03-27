@@ -29,8 +29,9 @@ html {
 }
 
 .bubble:hover {
-    color: white;
-    background-color: black;
+    /* color: white;
+    background-color: black; */
+    filter: invert(1);
     text-decoration: none;
 }
 
@@ -102,3 +103,31 @@ main {
     font-size: 3em;
 }
 
+.card {
+    justify-content: center;
+}
+
+.card-mouseover {
+    opacity: 0;
+    transition: 0.2s;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.project-card .card-image{
+    transition-duration: 0.2s;
+}
+
+.project-card:hover .card-image {
+    filter: blur(2px) grayscale(1);
+}
+
+.project-card:hover .card-mouseover {
+    opacity: 1;
+    
+}
+
+.card-image {
+    /* height: auto; */
+    max-height: 50vh;
+    width: 100%;
+}
